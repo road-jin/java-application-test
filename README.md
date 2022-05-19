@@ -31,8 +31,7 @@ JUnit Vintage<br/>
 기존에 JUnit4 버전으로 작성한 테스트 코드를 실행할때 vintage-engine 모듈을 사용합니다.<br/><br/> 
 
 ### 목차
-1) @Test / @BeforeAll / @AfterAll / @BeforeEach / @AfterEach /  @Disabled / @DisplayName / @DisplayNameGeneration<br/>
-&nbsp; * [소스코드](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/StudyTest.java) 
+1) [@Test / @BeforeAll / @AfterAll / @BeforeEach / @AfterEach <br/>@Disabled / @DisplayName / @DisplayNameGeneration](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/StudyTest.java)
 - - -
 ## 2. Mockito
 
