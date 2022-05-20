@@ -31,8 +31,12 @@ JUnit Vintage<br/>
 기존에 JUnit4 버전으로 작성한 테스트 코드를 실행할때 vintage-engine 모듈을 사용합니다.<br/><br/> 
 
 ### 목차
-1) [@Test, @BeforeAll, @AfterAll, @BeforeEach, @AfterEach <br/>@Disabled, @DisplayName, @DisplayNameGeneration](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/StudyTest.java)
-2) [Assertion 클래스의 주요 메소드 : assertEqulas(), assertNotNull()<br/> assertTrue(), assertAll(), assertThrows(), assertTimeout()](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/StudyTest2.java)
+1. [기본 애노테이션 : @Test, @BeforeAll, @AfterAll, @BeforeEach, @AfterEach <br/>@Disabled, @DisplayName, @DisplayNameGeneration](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/JunitDefaultAnnotations.java)
+<br/><br/>
+2. [Assertion 클래스의 주요 메소드 : assertEqulas(), assertNotNull()<br/> assertTrue(), assertAll(), assertThrows(), assertTimeout()](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/JunitAssertions.java)
+<br/><br/>
+3. [조건에 따라 실행하는 방법 : assumeTrue(), assumingThat(), @EnabledOnOs<br/> @EnabledOnJre, @EnabledIfEnvironmentVariable, @EnabledIfSystemProperty, @EnabledIf](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/JunitIf.java)
+<br/><br/>
 - - -
 ## 2. Mockito
 
