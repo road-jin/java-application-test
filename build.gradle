@@ -14,9 +14,28 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
+/*
 tasks.named('test') {
     useJUnitPlatform()
+}
+*/
+
+tasks.named('test') {
+    testLogging {
+        events "passed", "skipped", "failed", "standardOut", "standardError"
+    }
+    useJUnitPlatform {
+        includeTags 'fast'
+    }
+}
+
+// `gradle integrationTest`: integration tag가 붙은 테스트만 수행
+task integrationTest(type: Test, group: 'verification') {
+    useJUnitPlatform {
+        includeTags 'slow'
+    }
 }
