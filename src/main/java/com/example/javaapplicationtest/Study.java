@@ -6,6 +6,8 @@ public class Study {
 
     private int limit;
 
+    private String name;
+
     public Study() {
         this.status = StudyStatus.DRAFT;
         this.limit = 1;
@@ -19,11 +21,29 @@ public class Study {
         this.limit = limit;
     }
 
+    public Study(int limit, String name) {
+        this.limit = limit;
+        this.name = name;
+    }
+
     public StudyStatus getStatus() {
         return this.status;
     }
 
     public int getLimit() {
         return limit;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public String toString() {
+        return "Study{" +
+                "status=" + status +
+                ", limit=" + limit +
+                ", name='" + name + '\'' +
+                '}';
     }
 }

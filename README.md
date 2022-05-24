@@ -39,6 +39,8 @@ JUnit Vintage<br/>
 <br/><br/>
 4. [태그와 필터링 : @Tag, CustomTag](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/JunitTag.java)
 <br/><br/>
+5. [테스트 반복하기 : @RepeatedTest, @ParameterizedTest](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/JunitRepeat.java)
+<br/><br/>
 - - -
 ## 2. Mockito
 
