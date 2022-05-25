@@ -22,6 +22,7 @@ public class Study {
     }
 
     public Study(int limit, String name) {
+        this.status = StudyStatus.DRAFT;
         this.limit = limit;
         this.name = name;
     }

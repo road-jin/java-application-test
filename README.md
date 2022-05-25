@@ -41,6 +41,8 @@ JUnit Vintage<br/>
 <br/><br/>
 5. [테스트 반복하기 : @RepeatedTest, @ParameterizedTest](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/JunitRepeat.java)
 <br/><br/>
+6. [테스트 인스턴스 : @TestInstance](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/JunitTestInstance.java)
+<br/><br/>
 - - -
 ## 2. Mockito
 
