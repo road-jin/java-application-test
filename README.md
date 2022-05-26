@@ -43,6 +43,8 @@ JUnit Vintage<br/>
 <br/><br/>
 6. [테스트 인스턴스 : @TestInstance](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/JunitTestInstance.java)
 <br/><br/>
+7. [테스트 순서 : @TestMethodOrder](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/JunitScenario.java)
+<br/><br/>
 - - -
 ## 2. Mockito
 
