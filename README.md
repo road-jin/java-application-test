@@ -31,25 +31,24 @@ JUnit Vintage<br/>
 기존에 JUnit4 버전으로 작성한 테스트 코드를 실행할때 vintage-engine 모듈을 사용합니다.<br/><br/> 
 
 ### 목차
-1. [기본 애노테이션 : @Test, @BeforeAll, @AfterAll, @BeforeEach, @AfterEach <br/>@Disabled, @DisplayName, @DisplayNameGeneration](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/JunitDefaultAnnotations.java)
+1) [기본 애노테이션 : @Test, @BeforeAll, @AfterAll, @BeforeEach, @AfterEach <br/>@Disabled, @DisplayName, @DisplayNameGeneration](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/JunitDefaultAnnotations.java)
 <br/><br/>
-2. [Assertion 클래스의 주요 메소드 : assertEqulas(), assertNotNull()<br/> assertTrue(), assertAll(), assertThrows(), assertTimeout()](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/JunitAssertions.java)
+2) [Assertion 클래스의 주요 메소드 : assertEqulas(), assertNotNull()<br/> assertTrue(), assertAll(), assertThrows(), assertTimeout()](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/JunitAssertions.java)
 <br/><br/>
-3. [조건에 따라 실행하는 방법 : assumeTrue(), assumingThat(), @EnabledOnOs<br/> @EnabledOnJre, @EnabledIfEnvironmentVariable, @EnabledIfSystemProperty, @EnabledIf](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/JunitIf.java)
+3) [조건에 따라 실행하는 방법 : assumeTrue(), assumingThat(), @EnabledOnOs<br/> @EnabledOnJre, @EnabledIfEnvironmentVariable, @EnabledIfSystemProperty, @EnabledIf](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/JunitIf.java)
 <br/><br/>
-4. [태그와 필터링 : @Tag, CustomTag](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/JunitTag.java)
+4) [태그와 필터링 : @Tag, CustomTag](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/JunitTag.java)
 <br/><br/>
-5. [테스트 반복하기 : @RepeatedTest, @ParameterizedTest](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/JunitRepeat.java)
+5) [테스트 반복하기 : @RepeatedTest, @ParameterizedTest](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/JunitRepeat.java)
 <br/><br/>
-6. [테스트 인스턴스 : @TestInstance](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/JunitTestInstance.java)
+6) [테스트 인스턴스 : @TestInstance](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/JunitTestInstance.java)
 <br/><br/>
-7. [테스트 순서 : @TestMethodOrder](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/JunitScenario.java)
+7) [테스트 순서 : @TestMethodOrder](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/JunitScenario.java)
 <br/><br/>
-8. [JUnit5 디폴트설정 : junit-platform.properties](https://github.com/road-jin/java-application-test/blob/main/src/test/resources/junit-platform.properties)
+8) [JUnit5 디폴트설정 : junit-platform.properties](https://github.com/road-jin/java-application-test/blob/main/src/test/resources/junit-platform.properties)
 <br/><br/>
-9. [JUnit5 확장모델 : BeforeTestExecutionCallback, AfterTestExecutionCallback](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/FindSlowTestExtension.java)
-<br/>
-9-2. [JUnit5 확장모델 : @ExtendWith, @RegisterExtension](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/JunitExtend.java)
+9) [JUnit5 확장모델 : BeforeTestExecutionCallback, AfterTestExecutionCallback](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/FindSlowTestExtension.java)
+<br/>[JUnit5 확장모델 : @ExtendWith, @RegisterExtension](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/JunitExtend.java)
 <br/><br/>
 - - -
 ## 2. Mockito
