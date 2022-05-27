@@ -45,6 +45,8 @@ JUnit Vintage<br/>
 <br/><br/>
 7. [테스트 순서 : @TestMethodOrder](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/JunitScenario.java)
 <br/><br/>
+8. [JUnit5 디폴트설정 : junit-platform.properties](https://github.com/road-jin/java-application-test/blob/main/src/test/resources/junit-platform.properties)
+<br/><br/>
 - - -
 ## 2. Mockito
 
