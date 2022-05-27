@@ -47,6 +47,10 @@ JUnit Vintage<br/>
 <br/><br/>
 8. [JUnit5 디폴트설정 : junit-platform.properties](https://github.com/road-jin/java-application-test/blob/main/src/test/resources/junit-platform.properties)
 <br/><br/>
+9. [JUnit5 확장모델 : BeforeTestExecutionCallback, AfterTestExecutionCallback](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/FindSlowTestExtension.java)
+<br/>
+9-2. [JUnit5 확장모델 : @ExtendWith, @RegisterExtension](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/JunitExtend.java)
+<br/><br/>
 - - -
 ## 2. Mockito
 
