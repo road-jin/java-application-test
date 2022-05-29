@@ -1,5 +1,7 @@
-package com.example.javaapplicationtest;
+package com.example.javaapplicationtest.junit5;
 
+import com.example.javaapplicationtest.domain.Study;
+import com.example.javaapplicationtest.domain.StudyStatus;
 import org.junit.jupiter.api.*;
 
 import java.time.Duration;
@@ -10,7 +12,7 @@ public class JunitAssertions {
 
     @BeforeEach
     void before_each(){
-        study = new Study();
+        study = new Study(10);
     }
 
     /*
@@ -51,9 +53,9 @@ public class JunitAssertions {
     @Test
     @DisplayName("Study limit True 테스트")
     void study_isLimit_test(){
-        Assertions.assertTrue(study.getLimit() > 0);
-        Assertions.assertTrue(study.getLimit() > 0, "스터디 최대 참석 가능 인원은 0보다 커야합니다.");
-        Assertions.assertTrue(study.getLimit() > 0, () -> "스터디 최대 참석 가능 인원은 0보다 커야합니다.");
+        Assertions.assertTrue(study.getLimitCount() > 0);
+        Assertions.assertTrue(study.getLimitCount() > 0, "스터디 최대 참석 가능 인원은 0보다 커야합니다.");
+        Assertions.assertTrue(study.getLimitCount() > 0, () -> "스터디 최대 참석 가능 인원은 0보다 커야합니다.");
     }
 
     /*
@@ -66,7 +68,7 @@ public class JunitAssertions {
         Assertions.assertAll(
                 () -> Assertions.assertEquals(StudyStatus.DRAFT, study.getStatus()),
                 () -> Assertions.assertNotNull(study),
-                () -> Assertions.assertTrue(study.getLimit() > 0)
+                () -> Assertions.assertTrue(study.getLimitCount() > 0)
         );
     }
 

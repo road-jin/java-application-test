@@ -1,5 +1,6 @@
-package com.example.javaapplicationtest;
+package com.example.javaapplicationtest.junit5;
 
+import com.example.javaapplicationtest.CustomTag;
 import org.junit.jupiter.api.extension.AfterTestExecutionCallback;
 import org.junit.jupiter.api.extension.BeforeTestExecutionCallback;
 import org.junit.jupiter.api.extension.ExtensionContext;
@@ -35,9 +36,7 @@ import org.junit.jupiter.api.extension.ExtensionContext;
 public class FindSlowTestExtension implements BeforeTestExecutionCallback, AfterTestExecutionCallback {
 
     /*
-        @ExtendWith 애노테이션을 써서 등록할 경우
-
-
+    @ExtendWith 애노테이션을 써서 등록할 경우
     private final long THRESHOLD = 1000L;
     */
 

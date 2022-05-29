@@ -1,5 +1,6 @@
-package com.example.javaapplicationtest;
+package com.example.javaapplicationtest.junit5;
 
+import com.example.javaapplicationtest.domain.Study;
 import org.junit.jupiter.api.*;
 
 /*
@@ -27,8 +28,8 @@ public class JunitScenario {
     @DisplayName("기존 Study limit과 name에 JUnit5를 포함한 새로운 인스턴스 생성")
     @Test
     void studySetName_test(){
-        study = new Study(study.getLimit(), "JUnit5");
-        Assertions.assertEquals(7, study.getLimit());
+        study = new Study(study.getLimitCount(), "JUnit5");
+        Assertions.assertEquals(7, study.getLimitCount());
         Assertions.assertEquals("JUnit5", study.getName());
     }
 

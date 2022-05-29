@@ -1,5 +1,6 @@
-package com.example.javaapplicationtest;
+package com.example.javaapplicationtest.junit5;
 
+import com.example.javaapplicationtest.domain.Study;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Assumptions;
 import org.junit.jupiter.api.DisplayName;
@@ -26,7 +27,7 @@ public class JunitIf {
         Assumptions.assumeTrue("LOCAL".equalsIgnoreCase(test_env));
 
         Study study = new Study(10);
-        Assertions.assertEquals(10, study.getLimit());
+        Assertions.assertEquals(10, study.getLimitCount());
     }
 
     /*
@@ -42,7 +43,7 @@ public class JunitIf {
 
         Assumptions.assumingThat("LOCAL".equalsIgnoreCase(test_env), () ->{
             Study study = new Study(10);
-            Assertions.assertEquals(10, study.getLimit());
+            Assertions.assertEquals(10, study.getLimitCount());
         });
     }
 
@@ -93,7 +94,7 @@ public class JunitIf {
     @EnabledIfEnvironmentVariable(named = "TEST_ENV", matches = "LOCAL")
     void enabledIfEnvironmentVariable_test(){
         Study study = new Study(10);
-        Assertions.assertEquals(10, study.getLimit());
+        Assertions.assertEquals(10, study.getLimitCount());
     }
 
     /*
@@ -111,7 +112,7 @@ public class JunitIf {
     @EnabledIfSystemProperty(named = "java.version", matches = "11.0.13")
     void enabledIfSystemProperties_test(){
         Study study = new Study(10);
-        Assertions.assertEquals(10, study.getLimit());
+        Assertions.assertEquals(10, study.getLimitCount());
     }
 
     /*
@@ -127,7 +128,7 @@ public class JunitIf {
     @EnabledIf("customCondition")
     void enabledIf_test(){
         Study study = new Study(10);
-        Assertions.assertEquals(10, study.getLimit());
+        Assertions.assertEquals(10, study.getLimitCount());
     }
 
     boolean customCondition() {

@@ -1,4 +1,4 @@
-package com.example.javaapplicationtest;
+package com.example.javaapplicationtest.junit5;
 
 import org.junit.jupiter.api.*;
 

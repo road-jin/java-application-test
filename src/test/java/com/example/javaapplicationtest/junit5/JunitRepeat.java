@@ -1,5 +1,6 @@
-package com.example.javaapplicationtest;
+package com.example.javaapplicationtest.junit5;
 
+import com.example.javaapplicationtest.domain.Study;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.RepeatedTest;
@@ -34,14 +35,14 @@ public class JunitRepeat {
     @RepeatedTest(2)
     void repeat_test(){
         Study study = new Study(10);
-        Assertions.assertEquals(10, study.getLimit());
+        Assertions.assertEquals(10, study.getLimitCount());
     }
 
     @DisplayName("RepeatedTest 반복테스트 파라미터 추가")
     @RepeatedTest(2)
     void repeat_test2(RepetitionInfo repetitionInfo){
         Study study = new Study(10);
-        Assertions.assertEquals(10, study.getLimit());
+        Assertions.assertEquals(10, study.getLimitCount());
         System.out.println(repetitionInfo);
     }
 
@@ -49,7 +50,7 @@ public class JunitRepeat {
     @RepeatedTest(value = 3, name = "{displayName}, {currentRepetition}/{totalRepetitions}")
     void repeat_test3(RepetitionInfo repetitionInfo){
         Study study = new Study(10);
-        Assertions.assertEquals(10, study.getLimit());
+        Assertions.assertEquals(10, study.getLimitCount());
         System.out.println(repetitionInfo);
     }
 
@@ -90,7 +91,7 @@ public class JunitRepeat {
     @ParameterizedTest(name = "{index} {displayName} message = {0}")
     @ValueSource(ints = {10, 20, 30})
     void parameterized_test2(@ConvertWith(StudyConverter.class) Study study){
-        System.out.println(study.getLimit());
+        System.out.println(study.getLimitCount());
     }
 
     static class StudyConverter extends SimpleArgumentConverter {

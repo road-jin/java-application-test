@@ -1,5 +1,7 @@
-package com.example.javaapplicationtest;
+package com.example.javaapplicationtest.junit5;
 
+import com.example.javaapplicationtest.CustomTag;
+import com.example.javaapplicationtest.domain.Study;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -44,7 +46,7 @@ public class JunitTag {
     @Tag("fast")
     void tag_fast_test(){
         Study study = new Study(10);
-        Assertions.assertEquals(10, study.getLimit());
+        Assertions.assertEquals(10, study.getLimitCount());
     }
 
     @Test
@@ -52,7 +54,7 @@ public class JunitTag {
     @Tag("slow")
     void tag_slow_test(){
         Study study = new Study(10);
-        Assertions.assertEquals(10, study.getLimit());
+        Assertions.assertEquals(10, study.getLimitCount());
     }
 
     /*
@@ -63,6 +65,6 @@ public class JunitTag {
     @DisplayName("커스텀 태그 테스트")
     void customTag_test(){
         Study study = new Study(10);
-        Assertions.assertEquals(10, study.getLimit());
+        Assertions.assertEquals(10, study.getLimitCount());
     }
 }
