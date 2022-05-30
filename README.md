@@ -72,6 +72,8 @@ Mock이란?<br/>
 <br/><br/>
 2) [Mock Stubbing : when(), thenReturn(), thenTrow(), doThrow()](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/study/MockStubbing.java)
 <br/><br/>
+3) [Mock 객체 확인하기 : Mockito.verify(), inOrder.verify(), Mockito.verifyNoMoreInteractions()](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/study/MockVerify.java)
+<br/><br/>
 
 ## 3. 도커와 테스트
 

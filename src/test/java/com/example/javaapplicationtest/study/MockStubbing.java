@@ -80,7 +80,7 @@ public class MockStubbing {
         Mockito.doThrow(Throwable... toBeThrown).when(T mock).실행할메소드(인자);
         toBeThrown에 리턴할 예외의 인스턴스를 넣어줍니다.
         mock에 Mock 객체를 넣어줍니다.
-        실행할메소드에 Mock 객체의 실행할 메소드와 해당인자까지 작성합니다.
+        실행할메소드에 Mock 객체의 실행할 메소드와 해당 인자까지 작성합니다.
     */
     @Test
     @DisplayName("Mock Stubbing void 메소드 실행시 예외 던지기")
@@ -135,7 +135,7 @@ public class MockStubbing {
         Mockito.when(memberService.findById(1L)).thenReturn(Optional.of(member));
 
         // TODO studyRepository 객체에 save 메소드를 study 객체로 호출하면 study 객체 그대로 리턴하도록 Stubbing
-        Mockito.when(studyRepository.save(study)).thenReturn(study);
+        Mockito.when(studyRepository.save(ArgumentMatchers.any(Study.class))).thenReturn(ArgumentMatchers.any(Study.class));
 
         StudyService studyService = new StudyService(memberService, studyRepository);
         studyService.createNewStudy(1L, study);
