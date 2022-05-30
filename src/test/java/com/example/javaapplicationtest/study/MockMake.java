@@ -45,12 +45,12 @@ class MockMake {
     }
 
     /*
-        Mock을 애노테이션을 활용하여 파라미터변수를 통해 만드는 방법
+        Mock을 애노테이션을 활용하여 매개변수를 통해 만드는 방법
         @ExtendWith(MockitoExtension.class) 확장팩 등록을 합니다.
         파라미터변수에 @Mock 애노테이션을 붙입니다.
      */
     @Test
-    @DisplayName("Mockito로 Mock 만드는 방법 3 애노테이션 파라미터변수")
+    @DisplayName("Mockito로 Mock 만드는 방법 3 애노테이션 매개변수")
     void createStudyService3(@Mock MemberService memberService, @Mock StudyRepository studyRepository){
         StudyService studyService = new StudyService(memberService, studyRepository);
         assertNotNull(studyService);

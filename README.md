@@ -70,6 +70,8 @@ Mock이란?<br/>
 ### 목차
 1) [Mock 객체 만들기 : @Mock, Mock()](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/study/MockMake.java)
 <br/><br/>
+2) [Mock Stubbing : when(), thenReturn(), thenTrow(), doThrow()](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/study/MockStubbing.java)
+<br/><br/>
 
 ## 3. 도커와 테스트
 
