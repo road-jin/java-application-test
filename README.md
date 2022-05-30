@@ -68,7 +68,7 @@ Mock이란?<br/>
 [Mockito 레퍼런스](https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html)
 
 ### 목차
-1) [Mock 객체 만들기 : @Mock, Mock()](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/study/StudyServiceTest.java)
+1) [Mock 객체 만들기 : @Mock, Mock()](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/study/MockMake.java)
 <br/><br/>
 
 ## 3. 도커와 테스트
