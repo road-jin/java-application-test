@@ -59,7 +59,7 @@ Mock 객체를 쉽게 만들고 관리하고 검증할 수 있는 방법을 제�
 Mock이란?<br/>
 진짜 객체와 비슷하게 동작하지만 프로그래머가 직접 그 객체의 행동을 관리하는 객체입니다.<br/>
 <br/>
-다음 세 가지만 알면 Mock을 활용한 테스트를 쉽게 작성할 수 있다.
+다음 세 가지만 알면 Mock을 활용한 테스트를 쉽게 작성할 수 있습니다.
 - Mock을 만드는 방법
 - Mock이 어떻게 동작해야 하는지 관리하는 방법
 - Mock의 행동을 검증하는 방법
@@ -67,6 +67,9 @@ Mock이란?<br/>
 
 [Mockito 레퍼런스](https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html)
 
+### 목차
+1) [Mock 객체 만들기 : @Mock, Mock()](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/study/StudyServiceTest.java)
+<br/><br/>
 
 ## 3. 도커와 테스트
 
