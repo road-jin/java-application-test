@@ -1,4 +1,4 @@
-package com.example.javaapplicationtest.study;
+package com.example.javaapplicationtest.mockito;
 
 import com.example.javaapplicationtest.member.MemberService;
 import org.junit.jupiter.api.DisplayName;

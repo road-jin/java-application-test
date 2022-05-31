@@ -1,4 +1,4 @@
-package com.example.javaapplicationtest.study;
+package com.example.javaapplicationtest.mockito;
 
 import com.example.javaapplicationtest.domain.Member;
 import com.example.javaapplicationtest.domain.Study;
@@ -59,7 +59,7 @@ public class MockBDD {
         Study newStudy = studyService.createNewStudy(1L, study);
 
         // Then
-        Assertions.assertEquals(member, study.getOwner());
+        Assertions.assertEquals(member.getId(), study.getOwnerId());
         BDDMockito.then(memberService).should(Mockito.times(1)).notify(newStudy);
         BDDMockito.then(memberService).should(Mockito.times(1)).notify(member);
         BDDMockito.then(memberService).shouldHaveNoMoreInteractions();

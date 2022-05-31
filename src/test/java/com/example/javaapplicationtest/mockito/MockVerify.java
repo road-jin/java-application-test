@@ -1,4 +1,4 @@
-package com.example.javaapplicationtest.study;
+package com.example.javaapplicationtest.mockito;
 
 import com.example.javaapplicationtest.domain.Member;
 import com.example.javaapplicationtest.domain.Study;
@@ -63,7 +63,7 @@ public class MockVerify {
 
         Study newStudy = studyService.createNewStudy(1L, study);
 
-        Assertions.assertEquals(member, study.getOwner());
+        Assertions.assertEquals(member.getId(), study.getOwnerId());
         Mockito.verify(memberService, Mockito.times(1)).notify(newStudy);
         Mockito.verify(memberService, Mockito.atLeast(1)).notify(member);
         Mockito.verify(memberService, Mockito.never()).validate(ArgumentMatchers.any());
@@ -95,7 +95,7 @@ public class MockVerify {
 
         Study newStudy = studyService.createNewStudy(1L, study);
 
-        Assertions.assertEquals(member, study.getOwner());
+        Assertions.assertEquals(member.getId(), study.getOwnerId());
 
         InOrder inOrder = Mockito.inOrder(memberService);
         inOrder.verify(memberService).notify(newStudy);

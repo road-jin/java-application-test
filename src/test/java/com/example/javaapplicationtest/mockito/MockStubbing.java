@@ -1,4 +1,4 @@
-package com.example.javaapplicationtest.study;
+package com.example.javaapplicationtest.mockito;
 
 import com.example.javaapplicationtest.domain.Member;
 import com.example.javaapplicationtest.domain.Study;
@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.ArgumentMatcher;
 import org.mockito.ArgumentMatchers;
 import org.mockito.Mock;
 import org.mockito.Mockito;
@@ -139,8 +138,8 @@ public class MockStubbing {
 
         StudyService studyService = new StudyService(memberService, studyRepository);
         studyService.createNewStudy(1L, study);
-        Assertions.assertNotNull(study.getOwner());
-        Assertions.assertEquals(member, study.getOwner());
+        Assertions.assertNotNull(study.getOwnerId());
+        Assertions.assertEquals(member.getId(), study.getOwnerId());
     }
 
 }
