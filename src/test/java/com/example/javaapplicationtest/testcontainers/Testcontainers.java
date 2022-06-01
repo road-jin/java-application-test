@@ -23,9 +23,12 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.testcontainers.containers.MySQLContainer;
 import org.testcontainers.containers.output.Slf4jLogConsumer;
+import org.testcontainers.containers.startupcheck.OneShotStartupCheckStrategy;
+import org.testcontainers.containers.wait.strategy.LogMessageWaitStrategy;
+import org.testcontainers.containers.wait.strategy.Wait;
 import org.testcontainers.junit.jupiter.Container;
-import org.testcontainers.junit.jupiter.Testcontainers;
 
+import java.time.Duration;
 import java.util.Optional;
 
 /*
@@ -50,10 +53,10 @@ import java.util.Optional;
 @SpringBootTest
 @ExtendWith(MockitoExtension.class)
 @ActiveProfiles("test")
-@Testcontainers
+@org.testcontainers.junit.jupiter.Testcontainers
 @Slf4j
-@ContextConfiguration(initializers = testcontainers.ContainerPropertyInitializer.class)
-public class testcontainers {
+@ContextConfiguration(initializers = Testcontainers.ContainerPropertyInitializer.class)
+public class Testcontainers {
 
     @Mock
     MemberService memberService;

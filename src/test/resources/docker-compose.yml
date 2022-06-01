@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+  study-testdb:
+    image: mysql:5.7.34
+    platform: linux/amd64
+    ports:
+      - 3306
+    environment:
+      MYSQL_ROOT_PASSWORD: study
+      MYSQL_DATABASE: studytest
+      MYSQL_USER: study
+      MYSQL_PASSWORD: study
+    command: ['mysqld', '--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci']
+
+  study-test2db:
+    image: mysql:5.7.34
+    platform: linux/amd64
+    ports:
+      - 3306
+    environment:
+      MYSQL_ROOT_PASSWORD: study
+      MYSQL_DATABASE: studytest
+      MYSQL_USER: study
+      MYSQL_PASSWORD: study
+    command: [ 'mysqld', '--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci' ]
