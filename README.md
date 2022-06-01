@@ -89,6 +89,7 @@ Testcontainers이란?<br/>
 ### 목차
 1) [Testcontainers : @Testcontainers, @Container 등](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/testcontainers/Testcontainers.java)
 <br/><br/>
+2) [Testcontainers docker-compose : DockerComposeContainer](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/testcontainers/DockerCompose.java)
 ## 4. 성능 테스트
 
 ## 5. 운영 이슈 테스트
