@@ -90,11 +90,11 @@ public class JunitRepeat {
     @DisplayName("ParameterizedTest ValueSource SimpleArgumentConverter 테스트")
     @ParameterizedTest(name = "{index} {displayName} message = {0}")
     @ValueSource(ints = {10, 20, 30})
-    void parameterized_test2(@ConvertWith(StudyConverter.class) Study study){
+    void parameterized_test2(@ConvertWith(Converter.class) Study study){
         System.out.println(study.getLimitCount());
     }
 
-    static class StudyConverter extends SimpleArgumentConverter {
+    static class Converter extends SimpleArgumentConverter {
 
         @Override
         protected Object convert(Object source, Class<?> targetType) throws ArgumentConversionException {
@@ -138,11 +138,11 @@ public class JunitRepeat {
     @DisplayName("ParameterizedTest CsvSource ArgumentsAggregator 테스트")
     @ParameterizedTest(name = "{index} {displayName} message = {0}")
     @CsvSource({"10, '자바 스터디'", "20, 스프링"})
-    void parameterized_test5(@AggregateWith(StudyAggregator.class) Study study){
+    void parameterized_test5(@AggregateWith(Aggregator.class) Study study){
         System.out.println(study);
     }
 
-    static class StudyAggregator implements ArgumentsAggregator {
+    static class Aggregator implements ArgumentsAggregator {
         @Override
         public Object aggregateArguments(ArgumentsAccessor accessor, ParameterContext context) throws ArgumentsAggregationException {
             return new Study(accessor.getInteger(0), accessor.getString(1));

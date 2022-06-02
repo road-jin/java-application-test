@@ -246,5 +246,7 @@ ArchUnit?<br/>
 
 ### 목차
 1) [ArchUnit 테스트](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/archtests/ArchTests.java)
+2) [ArchUnit Junit5 Package](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/archtests/ArchPackageJunit5.java)
+3) [ArchUnit Junit5 Class](https://github.com/road-jin/java-application-test/blob/main/src/test/java/com/example/javaapplicationtest/archtests/ArchClassJunit5.java)
 
 
