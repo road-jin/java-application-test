@@ -115,8 +115,46 @@ CLI 지원
 - Assertion: 응답이 성공적인지 확인하는 방법 (응답 코드, 본문 내용 등)
 
 <br/><br/>
+JMeter 설치 및 실행
+[JMeter 다운로드 주소](https://jmeter.apache.org/download_jmeter.cgi)
+Binaries에 .zip 파일 다운받고서 압축파일을 풀면 되겠습니다.
+터미널에서 압축파일 푼 폴더/bin 폴더로 이동후 ./jmeter 명령어 실행합니다.
+<br/><br/>
+Thread Group 만들기<br/>
+- Name: 테스트 이름
+- Comments: 테스트 설명
+- Action to be taken after a Sampler error :
+<br/>Sampler가 에러가 날 경우 조치 액션(계속, 다음 Thread loop 시작, Thread 중단, 테스트 중지, 즉시 테스트 중지)
+- Number of Threads: 쓰레드 개수, 동시에 접속하는 User 수
+- Ramp-up period: 쓰레드 개수를 만드는데 소요할 시간
+- Loop Count: infinite 체크 하면 위에서 정한 쓰레드 개수로 계속 요청 보내기. 
+<br/>값을 입력하면 해당 쓰레드 개수 X 루프 개수 만큼 요청 보냄.
 
+Sampler 만들기
+- 여러 종류의 샘플러가 있지만 그 중에 우리가 사용할 샘플러는 HTTP Request 샘플러.
+- HTTP Sampler
+- 요청을보낼호스트,포트,URI,요청본문등을설정
+- 여러 샘플러를 순차적으로 등록하는 것도 가능하다.
 
+Listener 만들기
+- View Results Tree
+- View Resulrts in Table
+- Summary Report
+- Aggregate Report
+- Response Time Graph
+- Graph Results
+- ...
+
+Assertion 만들기
+- 응답 코드확인
+- 응답 본문확인
+
+CLI 사용하기 
+- jmeter -n -t 설정파일 
+<br/> -n : ui를 쓰지 않겠다.
+<br/> -t : 설정 파일
+<br/> ex) ~/Downloads/apache-jmeter-5.4.3/bin/jmeter -n -t ./study\ Perf\ Test.jmx
+<br/><br/>
 ## 5. 운영 이슈 테스트
 
 ## 6. 아키텍쳐 테스트
