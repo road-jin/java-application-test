@@ -1,4 +1,4 @@
-package com.example.javaapplicationtest.mockito;
+package com.example.javaapplicationtest.study;
 
 import com.example.javaapplicationtest.domain.Member;
 import com.example.javaapplicationtest.domain.Study;

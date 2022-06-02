@@ -29,6 +29,8 @@ dependencies {
     implementation 'de.codecentric:chaos-monkey-spring-boot:2.6.1'
     // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-actuator
     implementation 'org.springframework.boot:spring-boot-starter-actuator:2.7.0'
+    // https://mvnrepository.com/artifact/com.tngtech.archunit/archunit-junit5-engine
+    testImplementation 'com.tngtech.archunit:archunit-junit5-engine:0.23.1'
 
 
 

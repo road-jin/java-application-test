@@ -1,5 +1,6 @@
 package com.example.javaapplicationtest.domain;
 
+import com.example.javaapplicationtest.domain.StudyStatus;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

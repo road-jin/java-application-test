@@ -3,6 +3,8 @@ package com.example.javaapplicationtest.mockito;
 import com.example.javaapplicationtest.domain.Member;
 import com.example.javaapplicationtest.domain.Study;
 import com.example.javaapplicationtest.member.MemberService;
+import com.example.javaapplicationtest.study.StudyRepository;
+import com.example.javaapplicationtest.study.StudyService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -19,7 +21,8 @@ import java.util.Optional;
 public class MockStubbing {
 
     @Mock MemberService memberService;
-    @Mock StudyRepository studyRepository;
+    @Mock
+    StudyRepository studyRepository;
 
     /*
         모든 Mock 객체의 메소드 리턴 값

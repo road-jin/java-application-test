@@ -3,6 +3,8 @@ package com.example.javaapplicationtest.mockito;
 import com.example.javaapplicationtest.domain.Member;
 import com.example.javaapplicationtest.domain.Study;
 import com.example.javaapplicationtest.member.MemberService;
+import com.example.javaapplicationtest.study.StudyRepository;
+import com.example.javaapplicationtest.study.StudyService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

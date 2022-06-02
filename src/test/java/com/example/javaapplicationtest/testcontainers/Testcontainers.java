@@ -3,8 +3,8 @@ package com.example.javaapplicationtest.testcontainers;
 import com.example.javaapplicationtest.domain.Member;
 import com.example.javaapplicationtest.domain.Study;
 import com.example.javaapplicationtest.member.MemberService;
-import com.example.javaapplicationtest.mockito.StudyRepository;
-import com.example.javaapplicationtest.mockito.StudyService;
+import com.example.javaapplicationtest.study.StudyRepository;
+import com.example.javaapplicationtest.study.StudyService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -23,12 +23,8 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.testcontainers.containers.MySQLContainer;
 import org.testcontainers.containers.output.Slf4jLogConsumer;
-import org.testcontainers.containers.startupcheck.OneShotStartupCheckStrategy;
-import org.testcontainers.containers.wait.strategy.LogMessageWaitStrategy;
-import org.testcontainers.containers.wait.strategy.Wait;
 import org.testcontainers.junit.jupiter.Container;
 
-import java.time.Duration;
 import java.util.Optional;
 
 /*
