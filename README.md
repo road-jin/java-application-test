@@ -156,5 +156,78 @@ CLI 사용하기
 <br/> ex) ~/Downloads/apache-jmeter-5.4.3/bin/jmeter -n -t ./study\ Perf\ Test.jmx
 <br/><br/>
 ## 5. 운영 이슈 테스트
+ChaosMonkey?<br/>
+프로덕션 환경, 특히 분산 시스템 환경에서 불확실성을 파악하고 해결 방안을 모색하는데 사용하는 툴<br/>
+운영 환경 불확실성의 예
+- 네트워크 지연
+- 서버장애
+- 디스크 오작동
+- 메모리누수
+- ...
+
+[카오스 멍키 스프링 부트](https://codecentric.github.io/chaos-monkey-spring-boot/)
+- 스프링 부트 애플리케이션에 카오스 멍키를 손쉽게 적용해 볼 수 있는 툴
+- 즉, 스프링 부트 애플리케이션을 망가트릴 수 있는 툴
+
+### 카오스 멍키 스프링 부트 주요 개념
+공격 대상 (Watcher)
+- @RestController 
+- @Controller
+- @Service
+- @Repository
+- @Component
+
+공격 유형 (Assaults)
+- 응답 지연 (Latency Assault)
+- 예외 발생 (Exception Assault)
+- 애플리케이션 종료 (AppKiller Assault)
+- 메모리 누수 (Memory Assault)
+
+
+### 카오스 멍키 시작해보기
+터미널에서 httpie 이용하여 카오스 멍키 활용하기
+- 터미널에서 brew install httpie 
+- httpie는 터미널에서 http 요청을 보내는 명령어를 지원해줍니다.
+<br/> ex) http get localhost:8080/study/3
+<br/> http post localhost:8080/study limitCount=20 name="스프링"
+
+카오스 멍키 활성화
+- http post localhost:8080/actuator/chaosmonkey/enable 
+
+카오스 멍키 활성화 확인
+- http localhost:8080/actuator/chaosmonkey/status 
+
+카오스 멍키 와처 확인
+- http localhost:8080/actuator/chaosmonkey/watchers
+
+카오스 멍키 지연공격설정
+- http POST localhost:8080/actuator/chaosmonkey/assaults level=3 latencyRangeStart=2000 
+<br/> latencyRangeEnd=5000 latencyActive=true
+<br/> lebel=3 : 3번 요청중 1번쯤은 공격해라 
+<br/> latencyRangeStart=2000 : 2초에서 
+<br/> latencyRangeEnd=5000 : 5초 내외로 지연시켜라
+<br/> latencyActive=true : 레이턴시공격을 활성화 시켜라
+- 특정만 메소드에만 적용하고 싶을경우
+<br/>[참고](https://codecentric.github.io/chaos-monkey-spring-boot/latest/#_customize_watcher)
+
+카오스 멍키 에러공격설정
+- http POST localhost:8080/actuator/chaosmonkey/assaults level=3 latencyActive=false exceptionsActive=true 
+<br/> exception.type=java.lang.RuntimeException
+<br/> exceptionsActive=true : 에러공격을 활성화 시켜라
+<br/> exception.type=java.lang.RuntimeException : RuntimeException 에러가 발생하게 하라. 
+
+application.properties에서 적용해보기
+- chaos.monkey.enabled=true : 카오스몽키 활성화
+- chaos.monkey.assaults.level=3 : 3번 요청중 1번쯤은 공격해라
+- chaos.monkey.assaults.latency-range-start=2000 : 2초에서
+- chaos.monkey.assaults.latency-range-end=5000 : 5초 내외로 지연시켜라
+- chaos.monkey.assaults.latency-active=true : 레이턴시공격을 활성화 시켜라
+- chaos.monkey.assaults.watchedCustomServices=com.example.chaos.monkey.chaosdemo.controller.HelloController.sayHello,
+<br/> com.example.chaos.monkey.chaosdemo.service.HelloService : 특정메소드에만 적용
+
+카오스 멍키 공격 확인
+- http GET localhost:8080/actuator/chaosmonkey/assaults
+
+
 
 ## 6. 아키텍쳐 테스트
